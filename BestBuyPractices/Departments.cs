@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace BestBuyPractices
 {
-    internal class Departments
+    public class Departments : IDepartmentRepository 
     {
+        public int DepartmentID { get; set; }
+        public string Name { get; set; }
+
+        public IEnumerable<Departments> GetAllDepartments()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
